@@ -101,7 +101,7 @@ class AwairHttp:
         # Save the measured data with correctly mapped names.
         for k, v in data.items():
             if k in mapping:
-                out[mapping[k]] = v
+                out[mapping[k]] = float(v)
 
         metadata = {
             "received_time": timestamp,
